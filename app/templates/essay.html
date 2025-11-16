@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h3 class="text-center mb-4">རྒྱལ་ཡོངས་དགའ་སྐྱིད་དཔལ་འཛོམས།</h3>
+    
+    <div class="essay-box border p-3 rounded shadow-sm bg-light dzongkha-text">
+        {{ essay | safe }}
+    </div>
+    
+</div>
+
+<style>
+.dzongkha-text {
+    text-align: justify;                       /* Justify for neat alignment */
+    line-height: 1.8;                          /* Space between lines */
+    font-family: 'Jomolhari', 'Noto Sans Tibetan', serif; /* Proper Dzongkha font */
+    font-size: 18px;                            /* Adjust size as needed */
+    white-space: normal;                        /* Normal wrapping */
+    word-break: break-word;                     /* Avoid overflow */
+}
+</style>
+{% endblock %}
